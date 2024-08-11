@@ -6,7 +6,7 @@ class Player:
         self.skills: dict = {}
         self.guild: str = "Unaffiliated"
 
-    def add_skill(self, skill_name: str, mana_cost: int):
+    def add_skill(self, skill_name, mana_cost):
         if skill_name in self.skills:
             return "Skill already added"
         self.skills[skill_name] = mana_cost
