@@ -1,5 +1,5 @@
-from mammal import Mammal
-from lizard import Lizard
+from project.mammal import Mammal
+from project.lizard import Lizard
 
 
 mammal = Mammal("Stella")
