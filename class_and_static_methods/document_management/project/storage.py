@@ -22,6 +22,7 @@ class Storage:
             self.documents.append(document)
 
     def edit_category(self, category_id: int, new_name: str) -> None:
+        
         self.__edit_object(category_id, self.categories, new_name)
 
     def edit_topic(self, topic_id: int, new_topic: str, new_storage_folder: str) -> None:
