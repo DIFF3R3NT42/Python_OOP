@@ -44,6 +44,7 @@ class Storage:
 
     def __repr__(self):
         return f"\n".join([str(d) for d in self.documents])
+
     def __delete_object(self, object_id: int, object_collection: list):
         current_object = self.__find_object(object_id, object_collection)
         if current_object and current_object in object_collection:
