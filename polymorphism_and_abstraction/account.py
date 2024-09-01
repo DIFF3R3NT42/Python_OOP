@@ -1,8 +1,11 @@
+from typing import List
+
+
 class Account:
     def __init__(self, owner: str, amount: int = 0):
         self.owner = owner
         self.amount = amount
-        self.transactions: list[int] = []
+        self.transactions: List[int] = []
 
     @property
     def balance(self) -> int:
@@ -20,7 +23,7 @@ class Account:
         return self.handle_transaction(amount)
 
     def __str__(self):
-        return f"Account of {self.owner} with starting amount: {self.amount}".
+        return f"Account of {self.owner} with starting amount: {self.amount}"
 
     def __repr__(self):
         return f"Account({self.owner}, {self.amount})"
@@ -44,7 +47,8 @@ class Account:
         return self.balance == other.balance
 
     def __add__(self, other: 'Account'):
-        new_owner = f"Account({self.owner}&{other.owner})"
+        new_owner = f"{self.owner}&{other.owner}"
         new_amount = self.amount + other.amount
         new_account = Account(new_owner, new_amount)
         new_account._transactions = self.transactions + other._transactions
+        return new_account
