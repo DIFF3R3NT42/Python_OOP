@@ -26,6 +26,7 @@ class Car(Vehicle):
     def refuel(self, fuel: int) -> None:
         self.fuel_quantity += fuel
 
+
 class Truck(Vehicle):
     AC_CONSUMPTION = 1.6
     HOLE_IN_FUEL_TANK = 0.95
